@@ -1,0 +1,73 @@
+.. -*- mode: rst -*-
+
+|PythonVersion|_ |Coveralls|_ |Testing|_ |Linter|_ |PyPi|_
+
+.. |PythonVersion| image:: https://img.shields.io/badge/python-3.9%20%7C%203.12-blue
+.. _PythonVersion: target:: https://img.shields.io/badge/python-3.9%20%7C%203.12-blue
+
+.. |Coveralls| image:: https://coveralls.io/repos/github/neurospin-deepinsight/typex/badge.svg?branch=main
+.. _Coveralls: target:: https://coveralls.io/github/neurospin-deepinsight/typex
+
+.. |Testing| image:: https://github.com/neurospin-deepinsight/typex/actions/workflows/testing.yml/badge.svg
+.. _Testing: target:: https://github.com/neurospin-deepinsight/typex/actions
+
+.. |Linter| image:: https://github.com/neurospin-deepinsight/typex/actions/workflows/linters.yml/badge.svg
+.. _Linter: target:: https://github.com/neurospin-deepinsight/typex/actions
+
+.. |PyPi| image:: https://badge.fury.io/py/typex.svg
+.. _PyPi: target:: https://badge.fury.io/py/typex
+
+
+typeX
+=====
+
+\:+1: If you are using the code please add a star to the repository :+1:
+
+This work is made available by a `community of people <./AUTHORS.rst>`_, amoung which the CEA Neurospin BAOBAB laboratory.
+
+
+Important links
+---------------
+
+- `Official source code repo <https://github.com/neurospin-deepinsight/typex>`_
+- `Release notes <./CHANGELOG.rst>`_
+
+
+Content
+-------
+
+TypeX supplies a simple decorator to enforce Python types on function parameters when annotations are available.
+
+Where to start
+--------------
+
+Please find below a simple usage example:
+
+```python
+from typex import typecheck
+
+
+@typecheck
+def halve_integer(a: int) -> float:
+    return a / 2
+
+halve_integer(5)  # 2.5
+halve_integer(5.0)  # TraitsError
+```
+
+Install
+-------
+
+The package is available on `pypi <https://pypi.org/project/typex>`_.
+
+
+Contributing
+------------
+
+If you want to contribute to typex, be sure to review the `contribution guidelines <./CONTRIBUTING.rst>`_.
+
+
+License
+-------
+
+This project is under the following `LICENSE <./LICENSE.rst>`_.

@@ -18,7 +18,7 @@
 .. _PyPi: target:: https://badge.fury.io/py/typex
 
 
-typeX
+TypEx
 =====
 
 \:+1: If you are using the code please add a star to the repository :+1:

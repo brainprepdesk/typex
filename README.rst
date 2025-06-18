@@ -41,24 +41,23 @@ TypeX supplies a simple decorator to enforce Python types on function parameters
 Where to start
 --------------
 
-Please find below a simple usage example:
-
-```python
-from typex import typecheck
+Please find below a simple usage example::
 
 
-@typecheck
-def halve_integer(a: int) -> float:
-    return a / 2
+    from typex import typecheck
 
-halve_integer(5)  # 2.5
-halve_integer(5.0)  # TraitsError
-```
+    @typecheck(hints_params=True, hints_return=True)
+    def halve_integer(a: int) -> float:
+        return a / 2
+
+    halve_integer(5)  # 2.5
+    halve_integer(5.0)  # TraitsError
+
 
 Install
 -------
 
-The package is available on `pypi <https://pypi.org/project/typex>`_.
+The PyPi package is available `online <https://pypi.org/project/typex>`_.
 
 
 Contributing
@@ -70,4 +69,4 @@ If you want to contribute to typex, be sure to review the `contribution guidelin
 License
 -------
 
-This project is under the following `LICENSE <./LICENSE.rst>`_.
+This project is under the following `LICENSE <https://spdx.org/licenses/CECILL-B.html>`_.

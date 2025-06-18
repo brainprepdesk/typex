@@ -58,7 +58,11 @@ def check_type(
 
 
 def typing_to_traits(annot, default_value=False):
-    name = annot.__name__
+    if hasattr(annot, "__name__"):
+        name = f"{annot.__module__}.{annot.__name__}"
+        name = name.replace("builtins.", "")
+    else:
+        name = repr(annot).split("[")[0]
     if name not in TRAIT_TYPES:
         raise NotImplementedError(f"The '{name}' type is not handled yet.")
     expr = f"{TRAIT_TYPES[name]}("

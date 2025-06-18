@@ -6,6 +6,8 @@
 # for details.
 ##########################################################################
 
+import os
+
 import numpy as np
 import torch
 import traits.api as traits
@@ -46,6 +48,20 @@ class Tensor(traits.TraitType):
         return value
 
 
+class File(traits.TraitType):
+    def validate(self, objekt, name, value):
+        if not (isinstance(value, str) and os.path.isfile(value)):
+            self.error(objekt, name, value)
+        return value
+
+
+class Directory(traits.TraitType):
+    def validate(self, objekt, name, value):
+        if not (isinstance(value, str) and os.path.isdir(value)):
+            self.error(objekt, name, value)
+        return value
+
+
 class Sequence(traits.List):
     def validate(self, objekt, name, value):
         if not isinstance(value, (tuple, list)):
@@ -81,12 +97,15 @@ TRAIT_TYPES = {
     "int": "traits.Int",
     "float": "traits.Float",
     "bool": "traits.Bool",
-    "Tensor": "traits.Tensor",
+    "torch.Tensor": "traits.Tensor",
     "list": "traits.List",
     "tuple": "traits.Tuple",
-    "Sequence": "traits.Sequence",
-    "array": "traits.Array",
-    "Union": "traits.Union",
-    "Optional": "traits.Either",
+    "collections.abc.Sequence": "traits.Sequence",
+    "typing.Sequence": "traits.Sequence",
+    "numpy.array": "traits.Array",
+    "typing.Union": "traits.Union",
+    "typing.Optional": "traits.Either",
     "NoneType": "traits.Undefined",
+    "typex.typing_extensions.File": "traits.File",
+    "typex.typing_extensions.Directory": "traits.Directory"
 }

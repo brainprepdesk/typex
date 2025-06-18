@@ -36,7 +36,7 @@ Important links
 Content
 -------
 
-TypeX supplies a simple decorator to enforce Python types on function parameters when annotations are available.
+TypEx supplies a simple decorator to enforce Python types on function parameters when annotations are available.
 
 Where to start
 --------------

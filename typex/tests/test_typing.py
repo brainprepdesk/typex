@@ -6,7 +6,7 @@
 # for details.
 ##########################################################################
 
-
+import os
 import torch
 import types
 import unittest
@@ -18,6 +18,7 @@ from typing import Optional, Sequence, Union
 from traits.api import TraitError
 from typex.decorator import typecheck
 from typex.validation import check_type
+from typex.typing_extensions import File, Directory
 
 
 class TestExperiment(unittest.TestCase):
@@ -51,12 +52,16 @@ class TestExperiment(unittest.TestCase):
             Union[int, float],
             Sequence[int],
             Optional[int],
+            File,
+            Directory,
         ]
         self.mvalues = [
             (3, None),
             (2.3, None),
             ([1, 2, 3], None),
             (None, 3.),
+            (__file__, None),
+            (os.path.dirname(__file__), None),
         ]
 
     def tearDown(self):

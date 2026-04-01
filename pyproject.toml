@@ -9,7 +9,7 @@ name = "python-typex"
 readme = "README.rst"
 requires-python = ">=3.9"
 authors = [
-    {name = "typex developers", email = "antoine.grigis@cea.fr"},
+    {name = "typex developers"},
 ]
 license = { text = "CECILL-B" }
 classifiers = [
@@ -25,8 +25,8 @@ dependencies = [
 dynamic = ["version"]
 
 [project.urls]
-Source = "https://github.com/neurospin-deppinsight/typex"
-Tracker = "https://github.com/neurospin-deppinsight/typex/issues"
+Source = "https://github.com/brainprepdesk/typex"
+Tracker = "https://github.com/brainprepdesk/typex/issues"
 
 [tool.setuptools]
 platforms = ["Linux", "OSX"]

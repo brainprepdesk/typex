@@ -5,14 +5,14 @@
 .. |PythonVersion| image:: https://img.shields.io/badge/python-3.9%20%7C%203.12-blue
 .. _PythonVersion: target:: https://img.shields.io/badge/python-3.9%20%7C%203.12-blue
 
-.. |Coveralls| image:: https://coveralls.io/repos/github/neurospin-deepinsight/typex/badge.svg?branch=main
-.. _Coveralls: target:: https://coveralls.io/github/neurospin-deepinsight/typex
+.. |Coveralls| image:: https://coveralls.io/repos/github/brainprepdesk/typex/badge.svg?branch=main
+.. _Coveralls: target:: https://coveralls.io/github/brainprepdesk/typex
 
-.. |Testing| image:: https://github.com/neurospin-deepinsight/typex/actions/workflows/testing.yml/badge.svg
-.. _Testing: target:: https://github.com/neurospin-deepinsight/typex/actions
+.. |Testing| image:: https://github.com/brainprepdesk/typex/actions/workflows/testing.yml/badge.svg
+.. _Testing: target:: https://github.com/brainprepdesk/typex/actions
 
-.. |Linter| image:: https://github.com/neurospin-deepinsight/typex/actions/workflows/linters.yml/badge.svg
-.. _Linter: target:: https://github.com/neurospin-deepinsight/typex/actions
+.. |Linter| image:: https://github.com/brainprepdesk/typex/actions/workflows/linters.yml/badge.svg
+.. _Linter: target:: https://github.com/brainprepdesk/typex/actions
 
 .. |PyPi| image:: https://badge.fury.io/py/typex.svg
 .. _PyPi: target:: https://badge.fury.io/py/typex
@@ -29,7 +29,7 @@ This work is made available by a `community of people <./AUTHORS.rst>`_, amoung 
 Important links
 ---------------
 
-- `Official source code repo <https://github.com/neurospin-deepinsight/typex>`_
+- `Official source code repo <https://github.com/brainprepdesk/typex>`_
 - `Release notes <./CHANGELOG.rst>`_
 
 
